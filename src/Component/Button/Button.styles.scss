@@ -1,0 +1,124 @@
+@import "~bootstrap/scss/bootstrap";
+
+.bls_btn {
+  position: relative;
+  border-radius: 50px;
+  border: 0px;
+  width: 250px;
+  height: 60px; 
+  background-color: #FF344F;
+  overflow: hidden;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn_child {
+  position: relative;
+  transition: 0.5s;
+  font-size: 25px;
+}
+
+.bls_btn::before {
+  content: '';
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  width: 250px;
+  height: 60px;  
+  background-color: black;
+  padding: 0px;
+  color: white;
+  transform: translate(0%, 100%) skew(0deg);
+  transition: 0.5s;
+}
+
+.bls_btn:hover::before {
+  transform: translate(0%, 0) skew(0deg);
+}
+
+@media (min-width: 1200px) {
+  .bls_btn {
+    width: 250px;
+    height: 60px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn_child {
+    position: relative;
+    transition: 0.5s;
+    font-size: 25px;
+    font-weight: 600;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .bls_btn {
+    width: 250px;
+    height: 55px;
+    font-size: 20px; 
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn_child {
+    position: relative;
+    transition: 0.5s;
+    font-size: 20px;
+    font-weight: 500
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .bls_btn {
+    width: 200px;
+    height: 50px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn_child {
+    position: relative;
+    transition: 0.5s;
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 767px) {
+  .bls_btn {
+    width: 200px;
+    height: 45px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }  
+  .btn_child {
+    position: relative;
+    transition: 0.5s;
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 576px) {
+  .bls_btn {
+    width: 100px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn_child {
+    position: relative;
+    transition: 0.5s;
+    font-size: 15px;
+    font-weight: 500;
+  }
+}

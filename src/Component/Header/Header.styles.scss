@@ -1,0 +1,620 @@
+@import "~bootstrap/scss/bootstrap";
+
+.head {
+  .header {
+    padding: 10px;
+    align-items: center;
+  
+    .left_header_section {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      .social_icons {
+        display: flex;
+        align-items: center;
+        h6 {
+          margin: auto;
+        }
+  
+        .header-icons {
+          height: 1.2rem;
+          transition: 0.5s;
+          &:hover {
+            color: #FF344F;
+          }
+        }
+      }
+    }
+  
+    .middle_header_section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      h6 {
+        margin: auto;
+        text-align: center;
+        text-align-last: center;
+      }
+    }
+  
+    .right_header_section {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      margin-right: auto;
+  
+      .header_span {
+        font-size: 1rem;
+      }
+      .icon {
+        width: 1rem;
+        height: 1rem;
+        margin-right: 10px;
+
+        &:hover {
+          color: #FF344F;
+          translate: 0.5s;
+        }
+      }
+  
+      .pipe {
+        margin: 0px 10px;
+        height: 1rem;
+        display: flex;
+        align-items: center;
+        justify-self: center;
+      }
+    }
+  }
+  
+  .nav_row {
+    display: flex;
+    margin: 0px 30px;
+    background-color: #F7F7F7;
+  
+    .brand_name {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+  
+      .img_div {
+        background-color: #FF344F;
+        padding: 20px 10px;
+      }
+
+      .navigation {
+        display: flex;
+  
+        a {
+          text-decoration: none;
+          color: black;
+          margin: 10px;
+          transition: 0.5s;
+          &:hover {
+            color:#FF344F
+          }
+        }
+  
+        .navigation_link {
+          list-style-type: none;
+        }
+      }  
+    }
+
+    
+    .brand_toggle_btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: auto;
+  
+      .avr {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #FFD74E;
+        margin-right: 10px;
+  
+      }
+    }
+  }
+  
+}
+
+@media (min-width: 1200px) {
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .head {
+    .header {
+      padding: 10px;
+      align-items: center;
+    
+      .left_header_section {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        .social_icons {
+          display: flex;
+          align-items: center;
+          h6 {
+            margin: auto;
+          }
+    
+          .header-icons {
+            height: 1.2rem;
+            transition: 0.5s;
+            &:hover {
+              color: #FF344F;
+            }
+          }
+        }
+      }
+    
+      .middle_header_section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        h6 {
+          margin: auto;
+          text-align: center;
+          text-align-last: center;
+        }
+      }
+    
+      .right_header_section {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        margin-right: auto;
+    
+        .header_span {
+          font-size: 1rem;
+        }
+        .icon {
+          width: 1rem;
+          height: 1rem;
+          margin-right: 10px;
+        }
+    
+        .pipe {
+          margin: 0px 10px;
+          height: 1rem;
+          display: flex;
+          align-items: center;
+          justify-self: center;
+        }
+      }
+    }
+
+    .nav_row {
+      display: flex;
+      margin: 0px 30px;
+      background-color: #F7F7F7;
+    
+      .brand_name {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    
+        .img_div {
+          background-color: #FF344F;
+          padding: 20px 10px;
+          display: flex;
+          justify-content: center;
+        }
+
+        .navigation {
+          display: none;
+        }
+      }
+    
+      .brand_toggle_btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: auto;
+    
+        .avr {
+          display: none;
+    
+        }
+        .show {
+          border: 0px;
+          margin-left: 20px;
+          background-color: transparent;
+          .open, .close {
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .head {
+    .header {
+      padding: 10px;
+      align-items: center;
+    
+      .left_header_section {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        .social_icons {
+          display: flex;
+          align-items: center;
+          h6 {
+            margin: auto;
+          }
+    
+          .header-icons {
+            height: 1.2rem;
+            transition: 0.5s;
+            &:hover {
+              color: #FF344F;
+            }
+          }
+        }
+      }
+    
+      .middle_header_section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        h6 {
+          margin: auto;
+          text-align: center;
+          text-align-last: center;
+        }
+      }
+    
+      .right_header_section {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        margin-right: auto;
+    
+        .header_span {
+          font-size: 1rem;
+        }
+        .icon {
+          width: 1rem;
+          height: 1rem;
+          margin-right: 10px;
+        }
+    
+        .pipe {
+          margin: 0px 10px;
+          height: 1rem;
+          display: flex;
+          align-items: center;
+          justify-self: center;
+        }
+      }
+    }
+
+    .nav_row {
+      display: flex;
+      margin: 0px 30px;
+      background-color: #F7F7F7;
+    
+      .brand_name {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    
+        .img_div {
+          background-color: #FF344F;
+          padding: 20px 10px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+        }
+  
+        .navigation {
+          display: none;
+        }
+      }
+    
+      .brand_toggle_btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: auto;
+    
+        .avr {
+          display: none;
+        }
+        .show {
+          border: 0px;
+          margin-left: 20px;
+          background-color: transparent;          
+          .open, .close {
+            width: 35px;
+            height: 35px;
+          }
+        }
+      }
+    }
+  
+  }
+}
+
+@media (min-width: 577px) and (max-width: 767px) {
+
+  .head {
+    .header {
+      padding: 10px;
+      align-items: center;
+    
+      .left_header_section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        .social_icons {
+          display: flex;
+          align-items: center;
+          h6 {
+            margin: auto;
+          }
+    
+          .header-icons {
+            height: 1.2rem;
+            transition: 0.5s;
+            &:hover {
+              color: #FF344F;
+            }
+          }
+        }
+      }
+    
+      .middle_header_section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        h6 {
+          margin: auto;
+          text-align: center;
+          text-align-last: center;
+        }
+      }
+    
+      .right_header_section {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        margin-right: auto;
+        margin-top: 20px;
+    
+        .header_span {
+          font-size: 1rem;
+        }
+        .icon {
+          width: 1rem;
+          height: 1rem;
+          margin-right: 10px;
+        }
+    
+        .pipe {
+          margin: 0px 10px;
+          height: 1rem;
+          display: flex;
+          align-items: center;
+          justify-self: center;
+        }
+      }
+    }
+
+    .nav_row {
+      display: flex;
+      margin: 0px 30px;
+      background-color: #F7F7F7;
+    
+      .brand_name {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    
+        .img_div {
+          background-color: #FF344F;
+          padding: 20px 10px;
+          display: flex;
+          justify-content: center;
+        }
+  
+        .navigation {
+          display: none;
+        }
+      }
+    
+      .brand_toggle_btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: auto;
+    
+        .avr {
+          display: none;
+        }
+        .show {
+          border: 0px;
+          margin-left: 20px;
+          background-color: transparent;
+          margin-left: auto;
+          .open, .close {
+            width: 30px;
+            height: 30px;
+          }
+        }
+
+        .header_nav_bls_btn {
+          display: none;
+        }
+      }
+    }
+  
+  }
+}
+
+@media (max-width: 576px) {
+  .head {
+    .header {
+      padding: 10px;
+      align-items: center;
+    
+      .left_header_section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        .social_icons {
+          display: flex;
+          align-items: center;
+          h6 {
+            margin: auto;
+          }
+    
+          .header-icons {
+            height: 1.2rem;
+            transition: 0.5s;
+            &:hover {
+              color: #FF344F;
+            }
+          }
+        }
+      }
+    
+      .middle_header_section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        h6 {
+          margin: auto;
+          text-align: center;
+          text-align-last: center;
+        }
+      }
+    
+      .right_header_section {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        margin-right: auto;
+        margin-top: 20px;
+    
+        .header_span {
+          font-size: 1rem;
+        }
+        .icon {
+          width: 1rem;
+          height: 1rem;
+          margin-right: 10px;
+        }
+    
+        .pipe {
+          margin: 0px 10px;
+          height: 1rem;
+          display: flex;
+          align-items: center;
+          justify-self: center;
+        }
+      }
+    }
+
+    .nav_row {
+      display: flex;
+      margin: 0px 30px;
+      background-color: #F7F7F7;
+    
+      .brand_name {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    
+        .img_div {
+          background-color: #FF344F;
+          padding: 20px 10px;
+          display: flex;
+          justify-content: center;
+        }
+  
+        .navigation {
+          display: none;
+        }
+      }
+    
+      .brand_toggle_btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: auto;
+    
+        .avr {
+          display: none;
+        }
+        .show {
+          border: 0px;
+          margin-left: 20px;
+          background-color: transparent;
+          margin-left: auto;
+          .open, .close {
+            width: 25px;
+            height: 25px;
+          }
+        }
+
+        .header_nav_bls_btn {
+          display: none;
+        }
+      }
+    }
+  
+  }
+  
+}
+
+.offcanvas.offcanvas, .offcanvas-xxl, .offcanvas-xl, .offcanvas-lg, .offcanvas-md, .offcanvas-sm  {
+  --bs-offcanvas-width: 300px;
+  --bs-offcanvas-height: 30vh;
+}
+
+.offcanvas-body {
+  .offcas_nav {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    .offcas_list:hover {
+      color:#FF344F
+    }
+    .offcas_list:focus {
+      color:#FF344F;
+    }
+  }
+}
+
+.offcanvas-header .btn-close {
+  margin-left: auto;
+  background-color: #FF344F;
+  color: white;
+}
+.offcanvas-header:hover .btn-close:hover {
+  color:#FF344F;
+}
