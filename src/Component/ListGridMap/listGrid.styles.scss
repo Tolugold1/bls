@@ -1,0 +1,284 @@
+@import "~bootstrap/scss/bootstrap";
+
+.List {
+  .List_header {
+    display: flex;
+    top: -50px;
+    height: 80vh;
+    position: relative;
+  
+    .List_header_left {
+      background: url('../../../public/assets/images/hero-one-bg-1.jpg')no-repeat center;
+      height: 80vh;
+      background-size: cover;
+      display: flex;
+      padding: 20px;
+      left: 0;
+  
+      .list_container {
+        margin-top: 150px;
+        padding: 0;
+  
+        .l_grid_map {
+  
+          .l_grid_h1 {
+            font-size: 60px;
+            font-weight: 600;
+            line-height: 1.2rem;
+          }
+        }
+  
+        .l_grid_btn {
+          padding: 15px;
+          font-size: 15px;
+          font-weight: 400;
+          background-color: hsl(46, 100%, 90%, 0.5);
+          border-radius: 50px;
+          border: 0px;
+          margin-top: 30px;
+        }
+      }
+    }
+  
+    .list_header_right {
+      background: url('../../../public/assets/images/breadcrumbs-bg-2.jpg')no-repeat center;
+      height: 80vh;
+      width: 43.5%;
+      right: 0;
+      background-size: cover;
+      position: relative;
+    }
+  }
+  
+  .display_map {
+    margin-top: -70px;
+    height: 600px;
+    width: 100vw;
+    position: relative;
+  }
+
+  .b_body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .list_search_container_card {
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-top: -80px;
+    position: relative;
+    padding: 0px;
+    box-shadow: 1px 1px 10px -4px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 1px 10px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 10px -4px rgba(0,0,0,0.75);
+
+    .list_card {
+      padding: 20px;
+
+      .list_row {
+        margin-bottom: 20px;
+        
+        .card_col {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      .list_row1 {
+
+        .card_col {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+
+  }
+}
+
+@media (min-width: 577px) and (max-width: 767px) {
+  .List {
+    .List_header {
+      display: flex;
+      top: -50px;
+      height: 80vh;
+      position: relative;
+    
+      .List_header_left {
+        background: url('../../../public/assets/images/hero-one-bg-1.jpg')no-repeat center;
+        height: 80vh;
+        background-size: cover;
+        display: flex;
+        padding: 20px;
+        left: 0;
+    
+        .list_container {
+          margin-top: 150px;
+          padding: 0;
+    
+          .l_grid_map {
+    
+            .l_grid_h1 {
+              font-size: 60px;
+              font-weight: 600;
+              line-height: 1.2rem;
+            }
+          }
+    
+          .l_grid_btn {
+            padding: 15px;
+            font-size: 15px;
+            font-weight: 400;
+            background-color: hsl(46, 100%, 90%, 0.5);
+            border-radius: 50px;
+            border: 0px;
+            margin-top: 30px;
+          }
+        }
+      }
+    
+      .list_header_right {
+        background: url('../../../public/assets/images/breadcrumbs-bg-2.jpg')no-repeat center;
+        height: 80vh;
+        width: 43.5%;
+        right: 0;
+        background-size: cover;
+        position: relative;
+      }
+    }
+    
+    .display_map {
+      margin-top: -70px;
+      height: 700px;
+      width: 100vw;
+    }
+  
+    .list_search_container_card {
+      margin-right: 30px;
+      margin-left: 30px;
+      margin-top: -80px;
+      position: relative;
+      padding: 0px;
+      box-shadow: 1px 1px 10px -4px rgba(0,0,0,0.75);
+      -webkit-box-shadow: 1px 1px 10px -4px rgba(0,0,0,0.75);
+      -moz-box-shadow: 1px 1px 10px -4px rgba(0,0,0,0.75);
+  
+      .list_card {
+        padding: 20px;
+  
+        .list_row {
+          margin-bottom: 20px;
+          
+          .card_col {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+          }
+        }
+        .list_row1 {
+  
+          .card_col {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+          }
+        }
+      }
+  
+    }
+  }
+  
+}
+
+@media (max-width: 576px) {
+  .List {
+    .List_header {
+      display: flex;
+      top: -50px;
+      height: 80vh;
+      background: url('../../../public/assets/images/hero-one-bg-1.jpg')no-repeat center;
+      position: relative;
+    
+      .List_header_left {
+        height: 80vh;
+        background-size: cover;
+        display: flex;
+        padding: 20px;
+        left: 0;
+    
+        .list_container {
+          margin-top: 150px;
+          padding: 0;
+    
+          .l_grid_map {
+    
+            .l_grid_h1 {
+              font-size: 60px;
+              font-weight: 600;
+              line-height: 1.2rem;
+            }
+          }
+    
+          .l_grid_btn {
+            padding: 15px;
+            font-size: 15px;
+            font-weight: 400;
+            background-color: hsl(46, 100%, 90%, 0.5);
+            border-radius: 50px;
+            border: 0px;
+            margin-top: 30px;
+          }
+        }
+      }
+    
+      .list_header_right {
+        display: none;
+      }
+    }
+    
+    .display_map {
+      margin-top: -70px;
+      height: 700px;
+      width: 100vw;
+    }
+  
+    .list_search_container_card {
+      margin-right: 30px;
+      margin-left: 30px;
+      margin-top: -80px;
+      position: relative;
+      padding: 0px;
+      box-shadow: 1px 1px 10px -4px rgba(0,0,0,0.75);
+      -webkit-box-shadow: 1px 1px 10px -4px rgba(0,0,0,0.75);
+      -moz-box-shadow: 1px 1px 10px -4px rgba(0,0,0,0.75);
+  
+      .list_card {
+        padding: 20px;
+  
+        .list_row {
+          margin-bottom: 20px;
+          
+          .card_col {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+          }
+        }
+        .list_row1 {
+  
+          .card_col {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+          }
+        }
+      }
+  
+    }
+  }
+}

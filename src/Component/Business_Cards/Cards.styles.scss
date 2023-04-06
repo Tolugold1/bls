@@ -1,0 +1,165 @@
+@import "~bootstrap/scss/bootstrap";
+
+.b_card_head {
+  margin: 40px 20px;
+  border: 0px;
+  padding: 2px;
+  box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.75);
+
+  .b_img {
+    object-fit: cover;
+    object-position: center;
+  }
+  .features {
+    position: absolute;
+    padding: 0px 2px;
+    top: -15px;
+    right: 50%;
+    background-color: #FF344F;
+    transform: translateX(50%);
+
+    &::after {
+      position: absolute;
+      top: 0px;
+      right: -13px;
+      width: 0;
+      height: 0;
+      content: "";
+      border-bottom: 15px solid #ff344f;
+      border-right: 13.01px solid transparent;
+    }
+  }
+  .b_card_body {
+
+    .tag {
+      background-color: #ffd74e;
+      padding: 8px 30px 8px 20px;
+      width: 80%;
+      -webkit-clip-path: polygon(0 0, 100% 0, 98% 100%, 0% 100%);
+      clip-path: polygon(0 0, 100% 0, 98% 100%, 0% 100%);
+      margin-top: -31.5px;
+      display: flex;
+
+      .tag_text_and_icon {
+        display: flex;
+        align-items: center;
+
+        .tag_icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background-color: #FF344F;
+        }
+  
+        .tag_h6 {
+          font-weight: 500;
+          margin-left: 5px;
+        }
+  
+      }
+
+      .business_status {
+        margin-left: auto;
+
+        .close {
+          padding: 3px;
+          background-color: #FF344F;
+        }
+
+        .open {
+          padding: 3px;
+          background-color: #35C54C;
+        }
+      }
+    }
+
+    .b_card_inner_body {
+      margin-top: 20px;
+
+      .b_card_h2 {
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 700;
+
+        &:hover {
+          color: #FF344F;
+        }
+      }
+
+      .review_stat {
+        font-size: px;
+
+        .inner_review {
+          display: flex;
+          align-items: center;
+
+          .inner_review_h2 {
+            margin: auto 0px 0px;
+            font-size: 15px;
+          }
+          .b_star {
+            color: #FF344F;
+            width: 1rem;
+            height: 1rem;
+          }
+        }
+      }
+      .price {
+        font-weight: 300;
+      }
+      .phone_number {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+
+        .teli {
+          text-decoration: none;
+          color: black;
+
+          &:hover {
+            color:#FF344F;
+          }
+        }
+
+        p {
+          margin: auto 0px;
+        }
+
+        &:hover {
+          color: #FF344F;
+        }
+      }
+
+      .b_body_footer {
+        display: flex;
+        margin-top: 10px;
+
+        .b_body_text {
+          display: flex;
+          align-items: center;
+
+          .b_location_icon {
+            color: #FF344F;
+            margin-right: 5px;
+          }
+        }
+
+        .b_body_text_right {
+          margin-left: auto;
+          display: flex;
+          align-items: center;
+          .save_icon {
+            color: #FF344F;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+
+}

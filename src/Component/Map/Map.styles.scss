@@ -1,0 +1,14 @@
+@import "~bootstrap/scss/bootstrap";
+
+.d_location_map {
+  height: 100vh;
+  width: 100vw;
+  display: block;
+  z-index: 100;
+}
+
+.map-container {
+  height: 700px;
+  width: 100vw;
+  overflow: visible;
+}
