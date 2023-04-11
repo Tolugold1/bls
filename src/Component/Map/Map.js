@@ -7,7 +7,7 @@ import Loading from '../loading';
 
 const  BusinessMap = ({ lat, lng }) => {
 
-  const GOOGLE_MAP_API_KEY = "AIzaSyBLLH0maK8an_DbIFIiaRX0daNTsJyBVl8"
+  const GOOGLE_MAP_API_KEY = 
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: GOOGLE_MAP_API_KEY
   })
