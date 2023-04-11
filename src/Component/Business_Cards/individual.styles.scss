@@ -1,0 +1,200 @@
+@import "~bootstrap/scss/bootstrap";
+
+.individual {
+
+  .I_container {
+
+    .I_card_header {
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .i_media {
+        width: 100%;
+        justify-content: center;
+        padding: 10px 30px;
+  
+        .img_hose {
+          width: 100px;
+          height: 100px;
+          display: flex;
+          align-items: center;
+          margin: auto 5px;
+
+  
+           .I_img {
+            width: 100px;
+            height: 100px;
+            border-radius: 20px;
+          } 
+        }
+          
+        .I_media_left {
+          margin-right: auto;
+          margin-left: 10px;
+
+          .title {
+            font-size: 23px;
+          }
+        }
+
+        .I_media_middle {
+          margin-right: auto;
+          margin-left: auto;
+          display: flex;
+          align-items: center;
+          
+
+          .inner_review {
+            display: flex;
+            align-items: center;
+            line-height: 1.2rem;
+
+            .inner_review_h2 {
+              margin-top: auto;
+            }
+          }
+
+          .I_location {
+            display: flex;
+            align-items: center;
+            line-height: 1.2rem;
+
+            .l_left_location {
+              /* padding: 5px; */
+            }
+
+            .loc_h2 {
+              text-align: left;
+              margin: auto 0px;
+            }
+          }
+
+          .phone_number{
+            display: flex;
+            align-items: center;
+            line-height: 1.2rem;
+
+            .phone_icon {
+              color:#ff344f;
+            }
+            .telno {
+              margin: auto 0px auto 10px;
+              a{
+                text-decoration: none;
+                color: black;
+              }
+            }
+          }
+        }
+
+        .I_status {
+          display:flex;
+          align-items: center;
+          justify-content: center;
+
+          .icon_body, .icon_body1 {
+            padding: 10px;
+            
+            .I_heart_icon, .I_return_icon {
+              color: #ff344f;
+            }
+
+            &:hover {
+              background-color: #ff344f;
+              transition: 0.5s ease-in-out;
+            }
+            &:hover .I_heart_icon, &:hover .I_return_icon {
+              color: white;
+              transition: 0.5s ease-in-out;
+            }
+          }
+        }
+      }
+    }
+
+    .I_body_middle {
+
+      .left_col {
+        padding: 5px;
+
+        .I_left_header {
+
+          .alias {
+            font-size: 1.2rem;
+          }
+
+          .review_media {
+            border-color: #ff344f;
+            .reviews {
+              margin: 10px;
+              padding: 10px;
+              border-radius: 20px;
+              box-shadow: 0px 0px 5px 0px rgba(255,52,79,0.75);
+              -webkit-box-shadow: 0px 0px 5px 0px rgba(255,52,79,0.75);
+              -moz-box-shadow: 0px 0px 5px 0px rgba(255,52,79,0.75);
+
+              .reviews_body{
+
+                .reviews_footer {
+                  display: flex;
+                  justify-content: space-between;
+                }
+              }
+            }
+          }
+        }
+        .I_left_middle_photo_section {
+          margin-top: 20px;
+          .photo_case {
+            font-size: 1.2rem;
+          }
+          .photo-grid {
+            display: flex;
+            .photos {
+              max-height: 200px;
+              margin-top: 10px;
+              .pics {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+              }
+            }
+          }
+        }
+      }
+
+      .right_col {
+
+        .business_hours {
+          margin-top: 40px;
+          margin-bottom: 20px;
+          border: 0px;
+          box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);
+          -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);
+          -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);
+
+          .hour_title_card{
+            font-size: 1.2rem;
+          }
+          .day_list{
+            list-style-type: none;
+            padding-left: 0px;
+            margin-left: 0px;
+            margin-top: 20px;
+
+            .weekdays {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              line-height: 1.2rem;
+
+            }
+          }
+        }
+      }
+    }
+  }
+}

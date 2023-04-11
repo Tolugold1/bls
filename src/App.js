@@ -1,13 +1,13 @@
-import React, { Component, useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from "./Component/Header/Header";
 import "./App.styles.scss";
 import Home from "./Component/Home/Home";
-import About from "./Component/About/About";
 import BusinessMap from './Component/Map/Map';
-import Contact from "./Component/Contact/contact";
 import ListGridMap from "./Component/ListGridMap/listGrid"
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import WelcomeVoiceByAI from './Component/AI/AI';
+import IndividualBusiness from "./Component/Business_Cards/individualBusiness";
+import Footer from './Component/Footer/Footer';
 /* 
 import { connect } from 'react-redux';
 import { get_nearest_business } from './Redux/ActionCreator'; 
@@ -26,19 +26,27 @@ const mapDispatchToProps = dispatch => ({
  */
 const App = () => {
 
+/*   const [ defaultCard, setDefaultCard ] = useState([]);
+
+  useEffect(() => {
+    const ftDefault = () => {
+      fetch('htt')
+    }
+  }) */
 
   return (
     <div className="App">
+      <Header />
       <WelcomeVoiceByAI />
-      <Switch>
-        <Route exact path='/'><Home/></Route>
-        <Route exact path='/Home'><Home /></Route>
-        <Route exact path='/about'><About /></Route>
-        <Route exact path='/contact'><Contact /></Route>
-        <Route exact path='/listMapGrid'><ListGridMap /></Route>
-        <Route exact path='/map'><BusinessMap /></Route>
-        <Redirect to='/' component={<Home />} />
-      </Switch>
+      <Routes>
+        <Route path='/Home' element={<Home />}></Route>
+        <Route path="/Home/:cardId" element={<IndividualBusiness />} />
+        <Route path='/listMapGrid' element={<ListGridMap />}></Route>
+        <Route path="*" element={<Home />} />
+      </Routes>
+      <div style={{marginTop: "auto", bottom: '0px', top:"auto"}}>
+        <Footer />
+      </div>
     </div>
   );
 }

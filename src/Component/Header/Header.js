@@ -5,14 +5,13 @@ import { CiUser } from 'react-icons/ci';
 import { FaPinterestP } from 'react-icons/fa'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { Container } from 'reactstrap';
 import './Header.styles.scss';
 import { Link } from 'react-router-dom';
 import BlsButton from '../Button/Button';
 import OffcanvasBody from 'react-bootstrap/OffcanvasBody';
 import OffcanvasHeader from 'react-bootstrap/OffcanvasHeader';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import { fireEvent } from '@testing-library/react';
+import { Outlet } from 'react-router-dom';
 
 const Header = () => {
 
@@ -76,21 +75,15 @@ const Header = () => {
 
       <Row className='nav_row'>
         <Col lg='8' md='6' sm='6' xs='8'className='brand_name'>
-          <div className='img_div'>
-            <img src='assets/images/logo-1.png' alt='...'/>
-          </div>
+          <Link to='/Home'><div className='img_div'>
+            <img src='assets/images/Ask.com-Search-Logo.png' style={{width: '50px', height: '50px'}} alt='...'/>
+          </div></Link>
           <ul className='navigation'>
             <Link to='/Home'>
               <li className='navigation_link'><h5>Home</h5></li>
             </Link>
-            <Link to='/about'>
-              <li className='navigation_link'><h5>About Us</h5></li>
-            </Link>
             <Link to='/listMapGrid'>
               <li className='navigation_link'><h5>List Map Grid</h5></li>
-            </Link>
-            <Link to='/contact'>
-              <li className='navigation_link'><h5>Contact</h5></li>
             </Link>
           </ul>
         </Col>
@@ -109,20 +102,15 @@ const Header = () => {
                 <Link to='/Home'>
                   <li className='offcas_list'><h5>Home</h5></li>
                 </Link><hr style={{width: '100%'}}/>
-                <Link to='/about'>
-                  <li className='offcas_list'><h5>About Us</h5></li>
-                </Link><hr />
                 <Link to='/listMapGrid'>
                   <li className='offcas_list'><h5>List Map Grid</h5></li>
-                </Link><hr />
-                <Link to='/contact'>
-                  <li className='offcas_list'><h5>Contact</h5></li>
                 </Link><hr />
               </ul>
             </OffcanvasBody>
           </Offcanvas>
         </Col>
       </Row>
+      <Outlet />
     </div>
   )
 }

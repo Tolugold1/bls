@@ -3,7 +3,7 @@
 .List {
   .List_header {
     display: flex;
-    top: -50px;
+    top: -25px;
     height: 80vh;
     position: relative;
   
@@ -52,9 +52,10 @@
   
   .display_map {
     margin-top: -70px;
-    height: 600px;
+    height: 700px;
     width: 100vw;
     position: relative;
+    overflow-y: hidden;
   }
 
   .b_body {
@@ -74,6 +75,7 @@
 
     .list_card {
       padding: 20px;
+      display: flex;
 
       .list_row {
         margin-bottom: 20px;
@@ -91,6 +93,11 @@
           align-items: center;
           justify-content: center;
         }
+
+        .voice_aspect {
+          display: relative;
+          
+        }
       }
     }
 
@@ -101,7 +108,7 @@
   .List {
     .List_header {
       display: flex;
-      top: -50px;
+      top: -25px;
       height: 80vh;
       position: relative;
     
@@ -168,22 +175,28 @@
         padding: 20px;
   
         .list_row {
-          margin-bottom: 20px;
+          margin-bottom: 10px;
           
           .card_col {
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 10px;
+            margin-bottom: 10px;
           }
         }
         .list_row1 {
+          margin-top: -10px;
   
           .card_col {
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 10px;
+            margin-top: 0px;
+            margin-bottom: 10px;
+
+            .voice_aspect {
+              margin: auto 0px;
+            }
           }
         }
       }
@@ -197,7 +210,7 @@
   .List {
     .List_header {
       display: flex;
-      top: -50px;
+      top: -25px;
       height: 80vh;
       background: url('../../../public/assets/images/hero-one-bg-1.jpg')no-repeat center;
       position: relative;
@@ -256,29 +269,53 @@
       -moz-box-shadow: 1px 1px 10px -4px rgba(0,0,0,0.75);
   
       .list_card {
-        padding: 20px;
+        padding: 10px;
   
         .list_row {
-          margin-bottom: 20px;
+          margin-bottom: 10px;
           
           .card_col {
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 10px;
+            margin-bottom: 10px;
           }
         }
         .list_row1 {
-  
+          margin-bottom: 0px;
+
           .card_col {
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 10px;
+            margin-top: 10px;
+          }
+
+          .voice_btn {
+            font-size: 15px;
           }
         }
       }
   
+    }
+  }
+}
+
+.search_btn {
+
+  .voice_aspect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+
+    .usevoice {
+
+      .voice_btn2 {
+        display: flex;
+        align-items: center;
+        margin: 0px 10px;
+      }
     }
   }
 }

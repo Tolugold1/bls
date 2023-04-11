@@ -6,21 +6,21 @@
   justify-content: center;
   .home_header {
     display: flex;
-    top: -50px;
-    height: 150vh;
+    top: -25px;
+    height: 135vh;
     position: relative;
     width: 100vw;
     background: url('../../../public/assets/images/hero-one-bg-1.jpg');
   
       .home_header_left {
-        height: 150vh;
+        height: 100vh;
         background-size: cover;
         display: flex;
         justify-content: center;
         padding: 20px;
   
         .card_inner {
-          margin-top: 200px;
+          margin-top: 100px;
   
           .left_h1 {
             font-size: 90px;
@@ -47,22 +47,6 @@
                 border-color: transparent;
                 border: 0px;
               }
-              .voice_btn {
-                padding: auto;
-    
-    
-                .mic {
-                  width: 50px;
-                  height: 50px;
-    
-                  &:hover {
-                    color: #FF344F;
-                  }
-                  &:focus {
-                    color: #FF344F;
-                  }
-                }
-              }
             }
   
             .usevoice {
@@ -81,7 +65,8 @@
               }
             }
             .submit_btn {
-              margin-top: 20px;
+              padding: 0px;
+              margin-top: 10px;
               display: flex;
               align-items: center;
               justify-content: center;
@@ -91,9 +76,13 @@
                 margin-right: 20px;
               }
             }
+            .submit_btn {
+              padding: 0px;
+              margin: 0px;
+            }
           }
           .p_tag {
-            margin-top: 350px;
+            margin-top: 360px;
             font-size: 15px;
           }
         }
@@ -101,8 +90,7 @@
     
       .home_header_right {
         background: url('../../../public/assets/images/hero-one-bg-2.jpg');
-        height: 150vh;
-        width: 43.5%;
+        height: 135vh;
         right: 0;
         background-size: cover;
       }
@@ -110,10 +98,8 @@
   
   
   .card_container {
-  
-    margin-right: 30px;
-    margin-left: 30px;
-    padding: 0px;
+    padding: 0px 30px;
+    margin-bottom: 20px;
 
     .card_row {
   
@@ -215,20 +201,20 @@
   .header1 {
     .home_header {
       display: flex;
-      top: -50px;
-      height: 150vh;
+      top: -25px;
+      height: 120vh;
       position: relative;
     
         .home_header_left {
           background: url('../../../public/assets/images/hero-one-bg-1.jpg');
-          height: 150vh;
+          height: 120vh;
           background-size: cover;
           display: flex;
           justify-content: center;
           padding: 20px;
     
           .card_inner {
-            margin-top: 200px;
+            margin-top: 80px;
     
             .left_h1 {
               font-size: 60px;
@@ -236,8 +222,8 @@
             }
       
             .header_card {
-              padding: 10px;
-              width: 700px;
+              padding: 5px;
+              width: auto;
               position: absolute;
               margin-top: 20px;
       
@@ -246,7 +232,7 @@
                 align-items: center;
       
                 .category {
-                  margin: 10px;
+                  margin: 5px;
                 }
                 .category_pen {
                   padding: 8px;
@@ -257,24 +243,15 @@
                 }
                 .voice_btn {
                   padding: auto;
-      
-      
-                  .mic {
-                    width: 50px;
-                    height: 50px;
-      
-                    &:hover {
-                      color: #FF344F;
-                    }
-                    &:focus {
-                      color: #FF344F;
-                    }
-                  }
                 }
+              }
+              .submit_btn {
+                padding: 0px;
+                margin: 0px;
               }
             }
             .p_tag {
-              margin-top: 200px;
+              margin-top: 350px;
               font-size: 15px;
             }
           }
@@ -282,8 +259,7 @@
       
         .home_header_right {
           background: url('../../../public/assets/images/hero-one-bg-2.jpg');
-          height: 150vh;
-          width: 43.5%;
+          height: 120vh;
           right: 0;
           background-size: cover;
         }
@@ -298,20 +274,20 @@
   .header1 {
     .home_header {
       display: flex;
-      top: -50px;
-      height: 150vh;
+      top: -25px;
+      height: 100vh;
       position: relative;
+      background: url('../../../public/assets/images/hero-one-bg-1.jpg');
     
         .home_header_left {
-          background: url('../../../public/assets/images/hero-one-bg-1.jpg');
-          height: 150vh;
+          height: 100vh;
           background-size: cover;
           display: flex;
           justify-content: center;
-          padding: 20px;
+          padding: 5px;
     
           .card_inner {
-            margin-top: 200px;
+            margin-top: 80px;
     
             .left_h1 {
               font-size: 50px;
@@ -320,8 +296,8 @@
       
             .header_card {
               padding: 10px;
-              width: 700px;
-              position: absolute;
+              width: auto;
+              position: relative;
               margin-top: 20px;
       
               .head_card {
@@ -357,7 +333,7 @@
               }
             }
             .p_tag {
-              margin-top: 200px;
+              margin-top: 20px;
               font-size: 15px;
             }
           }
@@ -468,42 +444,41 @@
   .header1 {
     .home_header {
       display: flex;
-      top: -50px;
-      height: 200vh;
+      top: -25px;
+      height: 90vh;
       position: relative;
     
         .home_header_left {
           background: url('../../../public/assets/images/hero-one-bg-1.jpg');
-          height: 200vh;
+          height: 85vh;
           background-size: cover;
           display: flex;
           justify-content: center;
-          padding: 50px;
+          padding: 20px;
     
           .card_inner {
-            margin-top: 200px;
+            margin-top: 70px;
   
             .inner {
-              margin-right: auto;
-              margin-left: auto;
+
               .left_h1 {
                 font-size: 32px;
                 line-height: 50px;
               }
         
               .header_card {
-                padding: 10px;
+                padding: 5px;
                 width: 500px;
-                position: absolute;
+                position: relative;
                 margin-top: 20px;
         
                 .head_card {
                   display: block;
-                  padding: 10px;
+                  padding: 0px 5px;
     
         
                   .category {
-                    margin: 10px 0px;
+                    margin: 5px 0px;
                   }
                   .category_pen {
                     padding: 8px;
@@ -529,14 +504,18 @@
                     }
                   }
                 }
+                .submit_btn {
+                  margin: 0px;
+                }
               }
-              .p_tag {
-                margin-top: 350px;
-                font-size: 15px;
-              }
+              
+            .p_tag {
+              margin-top: 20px;
+              font-size: 15px;
             }
-            }
+          }
         }
+      }
     }
   }
   
@@ -545,169 +524,171 @@
 @media (max-width: 576px) {
 
   .header1 {
-    .home_header {
-      display: flex;
-      top: -50px;
-      height: 200vh;
-      position: relative;
+    .header1_inner {
+
+      .home_header {
+        display: flex;
+        top: -25px;
+        height: 70vh;
+        position: relative;
+        display: flex;
+        justify-content: center;
+      
+          .home_header_left {
+            background: url('../../../public/assets/images/hero-one-bg-1.jpg');
+            height: 70vh;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+      
+            .card_inner {
+              margin-top: 70px;
     
-        .home_header_left {
-          background: url('../../../public/assets/images/hero-one-bg-1.jpg');
-          height: 200vh;
-          background-size: cover;
-          display: flex;
-          justify-content: center;
-    
-          .card_inner {
-            margin-top: 200px;
+              .inner {
+                .left_h1 {
+                  font-size: 23px;
+                  line-height: 1rem;
+                }
+          
+                .header_card {
+                  padding: 5px;
+                  width: auto;
+                  position: relative;
+                  margin-top: 10px;
+          
+                  .head_card {
+                    display: block;
+                    padding: 5px;
+      
+          
+                    .category {
+                      margin: 5px 0px;
+                    }
+                    .category_pen {
+                      padding: 8px;
+                    }
+                    .category_input:focus {
+                      border-color: transparent;
+                      border: 0px;
+                    }
+                  }
+                  
+                  .submit_btn {
+                    margin: 0px;
+                  }
+                  .usevoice {
   
-            .inner {
-  
-              .left_h1 {
-                font-size: 32px;
-                line-height: 50px;
-              }
-        
-              .header_card {
-                padding: 10px;
-                width: auto;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                position: relative;
-                margin-top: 20px;
-        
-                .head_card {
-                  display: block;
-                  padding: 10px;
-    
-        
-                  .category {
-                    margin: 10px 0px;
-                  }
-                  .category_pen {
-                    padding: 8px;
-                  }
-                  .category_input:focus {
-                    border-color: transparent;
-                    border: 0px;
-                  }
-                  .voice_btn {
-                    padding: auto;
-        
-        
-                    .mic {
-                      width: 50px;
-                      height: 50px;
-        
-                      &:hover {
-                        color: #FF344F;
-                      }
-                      &:focus {
-                        color: #FF344F;
-                      }
+                    .instruction {
+                      margin: 0px;
+                    }
+                    .voice_btn {
+                      padding: 0px;
+                      margin: 0px;
+                      top: 0px;
+                      position: relative;
+                      
                     }
                   }
                 }
-              }
-              .p_tag {
-                margin-top: 50px;
-                font-size: 15px;
+                .p_tag {
+                  margin-top: 20px;
+                  font-size: 10px;
+                }
               }
             }
           }
-        }
-    }
-  
-    .card_container {
-  
-      display: flex;
-      align-self: center;
-      justify-self: center;
+      }
     
-      .card_row {
+      .card_container {
     
-        .card_card, .card_card1, .card_card2, .card_card3, .card_card4, .card_card5, .card_card6 {
-          position: relative;
-          background-color: #FFFFFF;
-          padding: 0;
+        display: flex;
+        align-self: center;
+        justify-self: center;
       
-          &::after {
-            position: absolute;
-            top: 0;
-            right: 0;
-            content: "";
-            width: 1px;
-            height: 100%;
-            background-color: #e8ebec;
-          }
-    
-          .inner_card {
-            border: 0px;
-            margin-bottom: 10px;
-    
-            .category_icon {
-              padding: 50px 30px;
-              position: relative;
-            }
+        .card_row {
+      
+          .card_card, .card_card1, .card_card2, .card_card3, .card_card4, .card_card5, .card_card6 {
+            position: relative;
+            background-color: #FFFFFF;
+            padding: 0;
         
-            .inner_category_icon {
-              transition: all 0.3s ease-in-out;
+            &::after {
+              position: absolute;
+              top: 0;
+              right: 0;
+              content: "";
+              width: 1px;
+              height: 100%;
+              background-color: #e8ebec;
             }
+      
+            .inner_card {
+              border: 0px;
+              margin-bottom: 10px;
+      
+              .category_icon {
+                padding: 50px 30px;
+                position: relative;
+              }
           
-            .icon_block {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-            }
-            .museum {
-              width: 60px;
-              height: 60px;
-            }
-            .card_h3 {
-              text-align: center;
-              font-weight: 300;
-            }
-        
-            .category_btn {
-              opacity: 0;
-              bottom: 0px;
-              display: none;
-              background-color: #FF344F;
-              position: relative;
-              transition: all 0.3s ease-out;
-        
-              .avatar {
-                margin: auto;
-                width: 50px;
-                height: 50px;
+              .inner_category_icon {
+                transition: all 0.3s ease-in-out;
+              }
+            
+              .icon_block {
                 display: flex;
-                justify-content: center;
                 align-items: center;
-                background-color: #FFD74E;
-                border-radius: 50%;
+                justify-content: center;
+              }
+              .museum {
+                width: 60px;
+                height: 60px;
+              }
+              .card_h3 {
+                text-align: center;
+                font-weight: 300;
+              }
+          
+              .category_btn {
+                opacity: 0;
+                bottom: 0px;
+                display: none;
+                background-color: #FF344F;
+                position: relative;
+                transition: all 0.3s ease-out;
+          
+                .avatar {
+                  margin: auto;
+                  width: 50px;
+                  height: 50px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  background-color: #FFD74E;
+                  border-radius: 50%;
+                }
               }
             }
           }
-        }
-    
-        .card_card:hover .category_btn, .card_card1:hover .category_btn, .card_card2:hover .category_btn, .card_card3:hover .category_btn, .card_card4:hover .category_btn, .card_card5:hover .category_btn, .card_card6:hover .category_btn{
-          display: block;
-          opacity: 1;
-          transition: all 0.3s ease-in-out;
-          bottom: 0px;
-          position: relative;
-        }
-        
-        .card_card:hover .category_icon, .card_card1:hover .category_icon, .card_card2:hover .category_icon, .card_card3:hover .category_icon, .card_card4:hover .category_icon, .card_card5:hover .category_icon, .card_card6:hover .category_icon {
-          margin-top: -30px;
-          margin-bottom: -20px;
-          transition: all 0.3s ease-in-out;
-        }
       
-        .card_card:hover .museum, .card_card1:hover .museum, .card_card2:hover .museum, .card_card3:hover .museum, .card_card4:hover .museum, .card_card5:hover .museum, .card_card6:hover .museum {
-          color: #FF344F;
-          transition: all 0.3s ease-in-out;
+          .card_card:hover .category_btn, .card_card1:hover .category_btn, .card_card2:hover .category_btn, .card_card3:hover .category_btn, .card_card4:hover .category_btn, .card_card5:hover .category_btn, .card_card6:hover .category_btn{
+            display: block;
+            opacity: 1;
+            transition: all 0.3s ease-in-out;
+            bottom: 0px;
+            position: relative;
+          }
+          
+          .card_card:hover .category_icon, .card_card1:hover .category_icon, .card_card2:hover .category_icon, .card_card3:hover .category_icon, .card_card4:hover .category_icon, .card_card5:hover .category_icon, .card_card6:hover .category_icon {
+            margin-top: -30px;
+            margin-bottom: -20px;
+            transition: all 0.3s ease-in-out;
+          }
+        
+          .card_card:hover .museum, .card_card1:hover .museum, .card_card2:hover .museum, .card_card3:hover .museum, .card_card4:hover .museum, .card_card5:hover .museum, .card_card6:hover .museum {
+            color: #FF344F;
+            transition: all 0.3s ease-in-out;
+          }
         }
       }
     }
