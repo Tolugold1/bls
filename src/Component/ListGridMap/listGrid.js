@@ -1,5 +1,6 @@
 /* global google */
 import React, { useState, useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux';
 import './listGrid.styles.scss';
 import BusinessMap from '../Map/Map';
 import { BsVectorPen } from 'react-icons/bs';
@@ -12,8 +13,13 @@ import BusinessCards from '../Business_Cards/Cards';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import Loading from '../loading';
 import Card1 from "../Business_Cards/Card1";
+import { sendTrascript, fetchWithForm } from '../../Redux/ActionCreator';
 
 const ListGridMap = () => {
+  const dispatch = useDispatch();
+  const business = useSelector((state) => state.business);
+  const businessByForm = useSelector((state) => state.businessByForm);
+
   const [ lat, setLat] = useState()
   const [ lng, setLng ] = useState()
   const [ Business, setBusiness ] = useState([]);
@@ -45,36 +51,6 @@ const ListGridMap = () => {
     return <span>Browser doesn't support speech recognition.</span>;
   }
 
-  const sendTrascript = () => {
-    setCheckLoading(true)
-
-      var obj = {
-        transcript: transcript
-      }
-
-      fetch("https://tan-talented-magpie.cyclic.app/users/transcript", {
-      method: 'POST',
-      headers: {
-        'Content-Type': "application/json"
-      },
-      body: JSON.stringify(obj)
-    })
-    .then(resp => resp.json())
-    .then(resp => {
-      console.log(resp);
-      if (resp.statusCode === 200) {
-        setBusiness(resp.answer.businesses);
-      } else {
-        setErrReturn(resp.message);
-      }
-    })
-    .then(resp => {
-      if (Business.length !== 0) {
-        setCheckLoading(false);
-        console.log(checkLoading,"loading")
-      }
-    })
-  }
   console.log("Business", Business)
 
   const handleSubmit = (e) => {
@@ -126,30 +102,9 @@ const ListGridMap = () => {
       }
     }
 
-    fetch('https://tan-talented-magpie.cyclic.app/users/places', {
-      method: 'POST',
-      headers: {
-        'Content-Type': "application/json"
-      },
-      body: JSON.stringify(obj)
-    })
-    .then(resp => resp.json())
-    .then(resp => {
-      console.log(resp)
-      if (resp.statusCode === 200) {
-        console.log("businesses", resp);
-        if (resp.answer === null) {
-          setExact(resp.exactLoc);
-        } else {
-          setBusiness(resp.answer[0].businesses)
-        }
-      } else if (resp.statusCode === 400) {
-        console.log(resp)
-        setMapSideFetchError(resp.message)
-        setCheckForError(true)
-      }
-    }).catch(err => console.log(err));
+    dispatch(fetchWithForm(obj))
   }
+
   console.log("Exact", exact)
   const handleChange = (event) => {
     const target = event.target;
@@ -271,7 +226,7 @@ const ListGridMap = () => {
                     <div className='voice_btn2'>
                       <button className='bls_btn m-2' onClick={SpeechRecognition.startListening}><span className='btn_child'>Start</span></button>
                       <button className='bls_btn m-2' onClick={resetTranscript}><span className='btn_child'>Reset</span></button>
-                      <button className='bls_btn m-2' onClick={() => {return (setErrReturn(null), sendTrascript())}}><span className='btn_child'>Ask</span></button>
+                      <button className='bls_btn m-2' onClick={() => {return (setErrReturn(null),  dispatch(sendTrascript(transcript)))}}><span className='btn_child'>Ask</span></button>
                       <div>
                         { checkLoading ? <div>
                           { Business.length !==  0 ? setCheckLoading(false) : <Loading />}
@@ -290,8 +245,8 @@ const ListGridMap = () => {
 
       {/* business card*/}
       <div className='list_business_cards' style={{marginTop: "50px"}}>
-        <Card1  exact={exact}/>
-        <BusinessCards business={Business} />
+        <Card1 exact={businessByForm.nearestPlaces} />
+        <BusinessCards business={business}  businessByForm={businessByForm.businessData}/>
       </div>
     </div>
   )

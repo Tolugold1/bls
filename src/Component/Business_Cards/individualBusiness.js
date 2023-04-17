@@ -13,7 +13,7 @@ const RenderCard = ({ cardFullData, dataR, noreview }) => {
 
   const weekDays = [ 'Sunday', 'Monday', 'Tuesday', 'Wednessday', 'Thursday', 'Friday', 'Saturday'];
 
-  const [review, setReview ] = useState([]);
+  const [rating, setRating ] = useState([]);
 
 
   useEffect(() => {
@@ -26,7 +26,7 @@ const RenderCard = ({ cardFullData, dataR, noreview }) => {
       }
     }
 
-    setReview(r);
+    setRating(r);
   }, []);
   console.log("dataR", dataR)
   console.log(noreview,"noreview");
@@ -49,13 +49,13 @@ const RenderCard = ({ cardFullData, dataR, noreview }) => {
                     <div>
                     <li className='inner_review'>
                       <h5>
-                        {review.map((data, key) => {
+                        {rating.map((data, key) => {
                           return (
                             <AiTwotoneStar className='b_star' key={key}/>
                           )
                         })}
                       </h5>
-                      <h6 className='inner_review_h2'>({review.length} Reviews)</h6>
+                      <h6 className='inner_review_h2'>({data.rating} rating)</h6>
                     </li>
                     <li className='I_location'>
                       <div className='l_left_location'>
@@ -66,6 +66,7 @@ const RenderCard = ({ cardFullData, dataR, noreview }) => {
                     <li className='phone_number'>
                       <div><BsPhone className='phone_icon' /></div> <p className='telno'><a className='teli' href={`tel:${data.phone}`}>{data.phone}</a></p>
                     </li>
+                    <li className='reviewsLength'>{dataR.length} Reviews</li>
                     </div>
                   </ul>
                   <div className='I_status  col-sm-12 col-md-3 col-lg-3'>

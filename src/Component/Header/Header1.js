@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import "./Header1.styles.scss"
 import Fade from 'react-reveal/Fade'
 import { BsVectorPen } from 'react-icons/bs';
@@ -16,8 +17,13 @@ import { BsArrowRightShort, BsController } from "react-icons/bs";
 import ListGridMap from '../ListGridMap/listGrid';
 import BusinessCards from '../Business_Cards/Cards';
 import Card1 from '../Business_Cards/Card1';
+import { sendTrascript, fetchWithForm } from '../../Redux/ActionCreator';
 
-const HomeHeader = () => {
+const HomeHeader = (props) => {
+
+  const dispatch = useDispatch();
+  const business = useSelector((state) => state.business);
+  const businessByForm = useSelector((state) => state.businessByForm);
 
   const [ textToSearch, setTextToSearch ] = useState({categories: "", location: ""});
   const [ buinessRecord, setBusinessRecord ] = useState([]);
@@ -51,28 +57,7 @@ const HomeHeader = () => {
     return <span>Browser doesn't support speech recognition.</span>;
   }
 
-  const sendTrascript = () => {
-    var obj = {
-      transcript: transcript
-    }
-    fetch("https://tan-talented-magpie.cyclic.app/users/transcript", {
-      method: 'POST',
-      headers: {
-        'Content-Type': "application/json"
-      },
-      body: JSON.stringify(obj)
-    })
-    .then(resp => resp.json())
-    .then(resp => {
-      console.log(resp);
-      if (resp.statusCode === 200) {
-        setIndicateFetching(false)
-        setBusinessRecord(resp.answer.businesses);
-      } else if ( resp.statusCode === 400) {
-        setErrMes(resp.message)
-      }
-    })
-  }
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -93,32 +78,12 @@ const HomeHeader = () => {
         keyword: textToSearch.categories,
       }
     }
-
-    fetch('https://tan-talented-magpie.cyclic.app/users/places', {
-      method: 'POST',
-      headers: {
-        'Content-Type': "application/json"
-      },
-      body: JSON.stringify(obj)
-    })
-    .then(resp => resp.json())
-    .then(resp => {
-      console.log(resp)
-      if (resp.answer === null) {
-        console.log("businesses", resp);
-        setHomeAnyWhereCard(resp.exactLoc)
-      } else {
-        setBusinessRecord(resp.answer[0].businesses)
-        console.log(resp)
-      }
-    }).catch(err => console.log(err));
+    dispatch(fetchWithForm(obj));
   }
 
   // extracting buiness-like word from the text supplied
 
   
-
-  console.log("answer", buinessRecord)
   return (
     <>
     <div className='header1'>
@@ -160,9 +125,9 @@ const HomeHeader = () => {
                     <div className='voice_btn'>
                       <button className='bls_btn fb m-3' onClick={SpeechRecognition.startListening}><span className='btn_child'>Start</span></button>
                       <button className='bls_btn fb m-3' onClick={resetTranscript}><span className='btn_child'>Reset</span></button>
-                      <button className='bls_btn fb m-3' onClick={() => { return (setIndicateFetching(!indicateFetching), sendTrascript(), setErrMes(null))}}><span className='btn_child'>Ask</span></button>
+                      <button className='bls_btn fb m-3' onClick={() => { return (setIndicateFetching(!indicateFetching), dispatch(sendTrascript(transcript)), setErrMes(null))}}><span className='btn_child'>Ask</span></button>
                     </div>
-                    {indicateFetching ? buinessRecord.length !== 0 ? null : <Loading /> : null}
+                    {indicateFetching ? business.businessData.length !== 0 ? null : <Loading /> : null}
                     <h6 style={{textAlign: "center", color: "#FF344F"}}>{errMes}</h6>
                   </div>
                 </Card>
@@ -176,8 +141,8 @@ const HomeHeader = () => {
         </header>
 
         <div className='business_card' style={{ marginTop: "30px", position: "relative", marginBottom: "30px"}}>
-          <Card1 exact={homeAnyWhereCard} />
-          <BusinessCards business={buinessRecord} />
+          <Card1 exact={businessByForm.nearestPlaces} />
+          <BusinessCards business={business} businessByForm={businessByForm.businessData}/>
         </div>
 
         <div className='card_container'>

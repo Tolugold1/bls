@@ -21,8 +21,7 @@ const Card1 = ({ exact }) => {
             return (
               <Col key={data.id}> 
                 <Fade top>
-                  <Card className="b_card_head" >{/* 
-                    <CardImg top className='b_img' src={data.image_url} alt="Business place image"/> */}
+                  <Card className="b_card_head" >
                     <div className='features'>
                       <span className='inner_feature'>Feature</span>
                     </div>
@@ -64,7 +63,6 @@ const Card1 = ({ exact }) => {
                   </Card>
                 </Fade>
               </Col>
-              
             )
           })
         } 

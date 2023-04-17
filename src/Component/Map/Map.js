@@ -1,13 +1,12 @@
 /*global google*/
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { GoogleMap, Marker, useLoadScript } from '@react-google-maps/api';
 import { business_data } from '../Business_Cards/data';
 import Loading from '../loading';
 
 
 const  BusinessMap = ({ lat, lng }) => {
-
-  const GOOGLE_MAP_API_KEY = 
+  const GOOGLE_MAP_API_KEY = "AIzaSyAq6EFJy6E-P2qCOVpjt2oDDwmoZR1Bh7c"
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: GOOGLE_MAP_API_KEY
   })
